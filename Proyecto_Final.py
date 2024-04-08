@@ -3,7 +3,7 @@ from mysql.connector import connect,Error
 
 def conexion():
     try:
-        conexiondb = connect(host="127.0.0.1",user="root",password="", database="Chinatown")
+        conexiondb = connect(host="127.0.0.1",user="root",password="", database="Proyecto_Final")
         return conexiondb
     except Error as e:
         print(e)
