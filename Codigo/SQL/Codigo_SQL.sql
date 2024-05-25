@@ -1,3 +1,4 @@
+# esta es la base de datos con las tablas normalizadas
 drop database if exists Metacritics;
 create database Metacritics;
 use Metacritics;
@@ -6,6 +7,8 @@ CREATE TABLE Plataforma (
     id INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(255) UNIQUE
 );
+select * from Plataforma;
+
 
 CREATE TABLE Desarrollador (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -34,8 +37,9 @@ CREATE TABLE Videojuegos (
     Desarrollador_ID INT,
     Publicado_por_ID INT,
     Genero_ID INT,
-    FOREIGN KEY (Plataforma_ID) REFERENCES Plataforma(id) ON DELETE SET NULL,
-    FOREIGN KEY (Desarrollador_ID) REFERENCES Desarrollador(id) ON DELETE SET NULL,
-    FOREIGN KEY (Publicado_por_ID) REFERENCES Publicado_por(id) ON DELETE SET NULL,
-    FOREIGN KEY (Genero_ID) REFERENCES Genero(id) ON DELETE SET NULL
+    FOREIGN KEY (Plataforma_ID) REFERENCES Plataforma(id),
+    FOREIGN KEY (Desarrollador_ID) REFERENCES Desarrollador(id),
+    FOREIGN KEY (Publicado_por_ID) REFERENCES Publicado_por(id),
+    FOREIGN KEY (Genero_ID) REFERENCES Genero(id)
 );
+select * from Videojuegos;
