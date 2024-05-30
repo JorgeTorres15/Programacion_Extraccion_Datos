@@ -40,29 +40,21 @@ def integrar_datos_videojuegos(df_videojuegos, df_plataforma, df_desarrollador, 
 
     return df_combinado
 
-if __name__ == "__main__":
-    config = {
-        "user": "root",
-        "password": "12345",  # Cambia password
-        "host": "localhost",
-        "database": "Metacritics"
-    }
+def obtener_conexion(config):
+    return mysql.connector.connect(**config)
 
-    conn = mysql.connector.connect(**config)
-
-    tablas = ["Plataforma", "Desarrollador", "Publicado_por", "Genero", "Videojuegos"]
-
+def extraer_todas_tablas(conn, tablas):
     dataframes = {}
-
     for tabla in tablas:
         dataframes[tabla] = extraer_datos_tabla(conn, tabla)
+    return dataframes
 
-    conn.close()
-
+def imprimir_tablas(dataframes):
     for tabla, df in dataframes.items():
         print(f"\nTabla: {tabla}")
         print(df)
 
+def combinar_datos(dataframes):
     df_plataforma = dataframes["Plataforma"]
     df_desarrollador = dataframes["Desarrollador"]
     df_publicado_por = dataframes["Publicado_por"]
@@ -76,6 +68,27 @@ if __name__ == "__main__":
         df_publicado_por,
         df_genero
     )
+
+    return df_combinado
+
+if __name__ == "__main__":
+    config = {
+        "user": "root",
+        "password": "12345",  # Cambia password
+        "host": "localhost",
+        "database": "Metacritics"
+    }
+
+    conn = obtener_conexion(config)
+
+    tablas = ["Plataforma", "Desarrollador", "Publicado_por", "Genero", "Videojuegos"]
+
+    dataframes = extraer_todas_tablas(conn, tablas)
+    conn.close()
+
+    imprimir_tablas(dataframes)
+
+    df_combinado = combinar_datos(dataframes)
 
     print("\nDataFrame combinado:")
     print(df_combinado)
