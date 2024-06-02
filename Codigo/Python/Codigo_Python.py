@@ -279,7 +279,7 @@ if __name__ == '__main__':
     database = "Metacritics"
     connection = conectar(host, user, password, database)
 
-    archivo = "datasets/metacritic_prueba.csv"
+    archivo = "datasets/datasets_300_registros.csv"
 
     insertar_registros(archivo, connection)
 
