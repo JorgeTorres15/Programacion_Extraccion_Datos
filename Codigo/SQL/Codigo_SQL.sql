@@ -4,24 +4,24 @@ create database Metacritics;
 use Metacritics;
 
 CREATE TABLE Plataforma (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_plataforma INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(255) UNIQUE
 );
 select * from Plataforma;
 
 
 CREATE TABLE Desarrollador (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_desarrollador INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(255) UNIQUE
 );
 
 CREATE TABLE Publicado_por (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_publicado_por INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(255) UNIQUE
 );
 
 CREATE TABLE Genero (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_genero INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(255) UNIQUE
 );
 
@@ -37,9 +37,9 @@ CREATE TABLE Videojuegos (
     Desarrollador_ID INT,
     Publicado_por_ID INT,
     Genero_ID INT,
-    FOREIGN KEY (Plataforma_ID) REFERENCES Plataforma(id),
-    FOREIGN KEY (Desarrollador_ID) REFERENCES Desarrollador(id),
-    FOREIGN KEY (Publicado_por_ID) REFERENCES Publicado_por(id),
-    FOREIGN KEY (Genero_ID) REFERENCES Genero(id)
+    FOREIGN KEY (Plataforma_ID) REFERENCES Plataforma(id_plataforma),
+    FOREIGN KEY (Desarrollador_ID) REFERENCES Desarrollador(id_desarrollador),
+    FOREIGN KEY (Publicado_por_ID) REFERENCES Publicado_por(id_publicado_por),
+    FOREIGN KEY (Genero_ID) REFERENCES Genero(id_genero)
 );
 select * from Videojuegos;
