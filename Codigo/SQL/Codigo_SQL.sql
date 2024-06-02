@@ -7,8 +7,6 @@ CREATE TABLE Plataforma (
     id INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(255) UNIQUE
 );
-select * from Plataforma;
-
 
 CREATE TABLE Desarrollador (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -42,4 +40,5 @@ CREATE TABLE Videojuegos (
     FOREIGN KEY (Publicado_por_ID) REFERENCES Publicado_por(id),
     FOREIGN KEY (Genero_ID) REFERENCES Genero(id)
 );
+
 select * from Videojuegos;
