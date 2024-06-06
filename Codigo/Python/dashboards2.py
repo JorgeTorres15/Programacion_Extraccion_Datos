@@ -1,7 +1,7 @@
 import mysql.connector
 import pandas as pd
 import datetime
-from Dataframes import combinar_datos, obtener_conexion, extraer_todas_tablas, imprimir_tablas
+from Extracción_SQL_Metacritics import combinar_datos, obtener_conexion, extraer_todas_tablas, imprimir_tablas
 # Importar bibliotecas necesarias para la visualizacion y creacion de dashboards
 import plotly.express as px
 import dash_bootstrap_components as dbc
