@@ -1,6 +1,6 @@
 import mysql.connector
 import pandas as pd
-from Dataframes import combinar_datos, obtener_conexion, extraer_todas_tablas, imprimir_tablas
+from Extracción_SQL_Metacritics import combinar_datos, obtener_conexion, extraer_todas_tablas, imprimir_tablas
 import dash_bootstrap_components as dbc
 # Importar funciones personalizadas desde el modulo Dataframes
 from dash import Dash, html, dcc, dash_table, callback, Input, Output, State
