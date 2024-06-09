@@ -217,7 +217,7 @@ def metacritic():
 
     df = pd.DataFrame(datos)
     df.index = df.index + 1
-    df.to_csv("C:/Users/Alexis/PycharmProjects/Semestre5/Imagenes/metacritic_prueba.csv")
+    df.to_csv("datasets_300_registros.csv")
 
 
 if __name__ == "__main__":
