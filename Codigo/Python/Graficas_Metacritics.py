@@ -122,7 +122,7 @@ def dashboard2(df):
 def actualizar_graficas_lanzamientos(genero):
     config = {
         "user": "root",
-        "password": "1803",
+        "password": "",
         "host": "localhost",
         "database": "Metacritics"
     }
@@ -228,7 +228,7 @@ def dashboard3(df):
 def actualizar_grafica_mejor_juego(fecha):
     config = {
         "user": "root",
-        "password": "1803",
+        "password": "",
         "host": "localhost",
         "database": "Metacritics"
     }
@@ -271,7 +271,7 @@ def dibujar_ranking_desarrolladores(data):
 def update_graph_tab(tab):
     config = {
         "user": "root",
-        "password": "1803",
+        "password": "",
         "host": "localhost",
         "database": "Metacritics"
     }
@@ -330,7 +330,7 @@ def actualizar_graficas(desarrollador, publicador):
 def update_content(tab):
     config = {
         "user": "root",
-        "password": "1803",
+        "password": "",
         "host": "localhost",
         "database": "Metacritics"
     }
