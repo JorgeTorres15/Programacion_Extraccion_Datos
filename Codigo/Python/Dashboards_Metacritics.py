@@ -98,8 +98,6 @@ def diseño():
                             selected_style=tab_style["active"]),
                     dcc.Tab(label="Juegos con mejor rating", value="top_rated", style=tab_style["idle"],
                             selected_style=tab_style["active"]),
-                    dcc.Tab(label="Juegos con peor rating", value="worst_rated", style=tab_style["idle"],
-                            selected_style=tab_style["active"]),
                 ])
             ]),
             dbc.Row([
