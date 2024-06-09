@@ -7,7 +7,7 @@ import plotly.express as px
 import dash_bootstrap_components as dbc
 from dash import Dash, html, dcc, dash_table, callback, Input, Output, State
 # Importar elementos y funciones necesarios desde el módulo 'DASHBOARDS'
-from Menu_Metacritics import app, diseño, componentes, update_content
+from Dashboards_Metacritics import app, diseño, componentes, update_content
 
 # Definir una función para crear filtros basados en los datos del dataframe
 def filtros(df):
