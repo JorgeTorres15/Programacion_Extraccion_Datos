@@ -40,7 +40,7 @@ def main():
            print("Iniciando Web Scraping de Metacritic...")
            time.sleep(1)
            metacritic()
-           print("Web Scraping completado. Los datos se han guardado en metacritic_prueba.csv")
+           print("Web Scraping completado. Los datos se han guardado en datasets_300_registros.csv")
            input("Presione Enter para continuar...")
        elif opcion == "2":
            print("Insertando datos en MySQL...")
