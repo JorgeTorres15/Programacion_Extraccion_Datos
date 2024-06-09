@@ -68,7 +68,7 @@ def diseño():
                                 selected_style=tab_style["active"]),
                         dcc.Tab(label="Github", value="github", style=tab_style["idle"],
                                 selected_style=tab_style["active"],
-                                children=dcc.Link(href="https://github.com/JorgeTorres15/Programacion_Extraccion_Datos/issues", children="Da click para ir al repositorio", target="_blank"))
+                                children=dcc.Link(href="https://github.com/JorgeTorres15/Programacion_Extraccion_Datos", children="Da click para ir al repositorio", target="_blank"))
                     ], style={"marginTop": "15px", "width": "600px", "height": "50px"}),
                     width=6),
                 dbc.Col(
