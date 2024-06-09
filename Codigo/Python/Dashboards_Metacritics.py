@@ -155,4 +155,4 @@ def update_content(tab):
 
 # Ejecutar la aplicacion
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(debug=False)
