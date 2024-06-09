@@ -50,7 +50,7 @@ def main():
            # Configuracion de la conexion MySQL
            host = "127.0.0.1"
            user = "root"
-           password = "Jt299143."
+           password = ""
            database = "Metacritics"
 
 
@@ -82,7 +82,7 @@ def main():
            # Configuracion de la conexion MySQL
            config = {
                "user": "root",
-               "password": "Jt299143.",
+               "password": "",
                "host": "localhost",
                "database": "Metacritics"
            }
